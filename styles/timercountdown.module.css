@@ -1,0 +1,22 @@
+.timercountdown{
+    font-weight: bold;
+    color: rgb(0, 174, 255);
+    font-size: 1.46vw;
+    padding: 10px 0px;
+}
+
+.timercountdown > span{
+   color:rgb(255, 0, 0); 
+}
+
+@media only screen and (orientation:portrait){
+    .timercountdown{
+        font-size: 1.46vh;
+    }
+}
+
+@media only screen and (orientation:portrait) and (max-width:300px){
+    .timercountdown{
+        font-size: 1.30vh;
+    }
+}

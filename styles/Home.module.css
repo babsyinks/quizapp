@@ -51,11 +51,11 @@
   border: none;
 }
 
-.btnWrapper button:nth-child(1){
+.timed{
   background-color: red;
 }
   
-.btnWrapper button:nth-child(2){
+.untimed{
   background-color: yellowgreen;
 }
 
