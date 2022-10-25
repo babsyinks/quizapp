@@ -10,7 +10,6 @@ const Quiz: NextPage<{name:string}> = ({name}) => {
     </div>
   )
 }
-
 export  const getServerSideProps:GetServerSideProps = async (context)=>{
   return {
     props:{

@@ -16,12 +16,12 @@ const Home: NextPage = () => {
     <h1 className={styles.heading}>Its Time To Test Your Knowledge!</h1> 
       <div className= {styles.wrapper}>  
         <div className={styles.btnWrapper}>
-          <Link href={{ pathname: '/quiz', query: { name: 'timed' } }}>
+          <Link href={{ pathname: '/quiz_setting', query: { name: 'timed' } }}>
           <a className={styles.s}>
             <button className={styles.timed}>Start Timed Quiz <i className="fa-solid fa-stopwatch-20"></i></button> 
           </a>
           </Link> 
-          <Link href={{ pathname: '/quiz', query: { name: 'untimed' } }}>
+          <Link href={{ pathname: '/quiz_setting', query: {name:'untimed'}}}>
             <a className={styles.s}>
               <button className={styles.untimed}>Start Untimed Quiz <i className ="fa-solid fa-clipboard-question"></i> </button>
             </a>
