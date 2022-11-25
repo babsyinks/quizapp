@@ -5,11 +5,13 @@ import styles from '../styles/timercountdown.module.css'
 
 // Random component
 const Completionist = () => <span>You are good to go!</span>;
-const crt = (t)=>{
+const crt = (t:number)=>{
   return t<=1?'':'s'
 }
+
+type time = {hours:number,minutes:number,seconds:number,completed:boolean}
 // Renderer callback with condition
-const renderer = ({ hours, minutes, seconds, completed }) => {
+const renderer = ({hours, minutes, seconds, completed}:time) => {
     
   if (completed) {
     // Render a completed state
