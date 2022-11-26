@@ -4,16 +4,22 @@ import { NextComponentType } from 'next';
 import styles from '../styles/timercountdown.module.css'
 
 // Random component
-const Completionist = () => <span>You are good to go!</span>;
+const Completionist = () => <span>Quiz Is Over!</span>;
 const crt = (t:number)=>{
   return t<=1?'':'s'
 }
 
-type time = {hours:number,minutes:number,seconds:number,completed:boolean}
+type TimerEnd = {removeTimer:()=>void}
+
+export const CountDownTimer = ({removeTimer}:TimerEnd)=>{
+  
+  type Time = {hours:number,minutes:number,seconds:number,completed:boolean}
 // Renderer callback with condition
-const renderer = ({hours, minutes, seconds, completed}:time) => {
+
+const renderer = ({hours, minutes, seconds, completed}:Time) => {
     
   if (completed) {
+    removeTimer()
     // Render a completed state
     return <Completionist />;
   } else {
@@ -22,11 +28,9 @@ const renderer = ({hours, minutes, seconds, completed}:time) => {
     return <span className = {styles.timercountdown}><span>This Quiz Will End In:</span>{hours > 0 && `${hours} hour${crt(hours)},`} {minutes > 0 && `${minutes} minute${crt(minutes)},`} {seconds > 0 && `${seconds} second${crt(seconds)}.`}</span>;
   }
 };
-
-export const CountDownTimer:NextComponentType = ()=>{
   return (
     <Countdown
-      date={Date.now() + 150000}
+      date={Date.now() + 100000}
       renderer={renderer}
     />
   )

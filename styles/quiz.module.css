@@ -164,7 +164,6 @@ color: white;
 }
 
 .quizWrapper button{
-    border-radius: 50%;
     font-weight: bold;
     background-color: darkslateblue;
     color: white;
@@ -173,4 +172,10 @@ color: white;
     margin-top: 1rem;
     outline: none;
     border: none;
+}
+
+@media screen and (orientation:portrait) {
+    .scoreBox{
+        width: 80%;
+    }
 }
