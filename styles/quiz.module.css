@@ -120,6 +120,7 @@ color: white;
     border: none;
     width: 20vw;
     font-size: medium;
+    margin-bottom: 10px;
 }
 
 .nextBtn:disabled{

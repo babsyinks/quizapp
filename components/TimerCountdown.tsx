@@ -1,6 +1,5 @@
 import React from 'react';
 import Countdown from 'react-countdown';
-import { NextComponentType } from 'next';
 import styles from '../styles/timercountdown.module.css'
 
 // Random component
@@ -9,9 +8,9 @@ const crt = (t:number)=>{
   return t<=1?'':'s'
 }
 
-type TimerEnd = {removeTimer:()=>void}
+type TimerEnd = {removeTimer:()=>void,numQuestions:number}
 
-export const CountDownTimer = ({removeTimer}:TimerEnd)=>{
+export const CountDownTimer = ({removeTimer,numQuestions}:TimerEnd)=>{
   
   type Time = {hours:number,minutes:number,seconds:number,completed:boolean}
 // Renderer callback with condition
@@ -30,7 +29,7 @@ const renderer = ({hours, minutes, seconds, completed}:Time) => {
 };
   return (
     <Countdown
-      date={Date.now() + 100000}
+      date={Date.now() + (15000 * numQuestions)}
       renderer={renderer}
     />
   )

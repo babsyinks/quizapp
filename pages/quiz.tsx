@@ -1,6 +1,6 @@
 import type { GetServerSideProps, NextPage } from 'next'
 import Link from 'next/link';
-import React, { useState,useEffect } from 'react';
+import React, { useState } from 'react';
 import { CountDownTimer } from '../components/TimerCountdown'
 import Quizmain from '../components/Quizmain';
 import styles from '../styles/quiz.module.css'
@@ -47,7 +47,7 @@ const handleTimerStopped = ()=>{
       </>
 :
      <>
-        {name === 'timed' && <CountDownTimer removeTimer={handleTimerStopped}/>}
+        {name === 'timed' && <CountDownTimer removeTimer={handleTimerStopped} numQuestions={+numQuestions}/>}
         <Quizmain difficulty={difficulty} numQuestions={numQuestions} completeQuiz={handleQuizComplete} timerstatus={timerStopped} showResults={handleQuizResults}/>
       </>
       }

@@ -1,6 +1,5 @@
 import type { NextPage } from 'next'
-import Link from 'next/link';
-import React, { useState,useEffect,useRef } from 'react';
+import React, { useState,useEffect } from 'react';
 import styles from '../styles/quiz.module.css'
 
 interface QuestionsSettingsMain{
