@@ -39,7 +39,6 @@
     justify-content: space-around;
     align-items: center;
     width: 96%;
-    height: 20px;
 }
 
 .buttonsWrapper button{
@@ -141,4 +140,39 @@
   .questionsnum span{
     color: red;
     padding-left: 0.5rem;
+  }
+
+  @media screen and (max-width:740px) {
+    .slider_wrapper{
+        width: 80%;
+    }
+
+    .slider_wrapper h2{
+        font-size: large;
+        text-align: center;
+    }
+  }
+
+  @media screen and (max-width:420px) {
+    .slider_wrapper{
+        width: 95%;
+    }
+  }
+
+  @media screen and (max-width:400px){
+    .buttonsWrapper button{
+        padding: 1rem 1.5rem;
+    }
+  }
+
+  @media screen and (max-width:340px){
+    .buttonsWrapper button{
+        padding: 1rem;
+    }
+  }
+
+  @media screen and (orientation:portrait) {
+    .btn{
+        width: 50%;
+    }
   }
